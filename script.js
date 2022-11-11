@@ -8,7 +8,7 @@ let persone = {
 };
 
 console.log(persone.name);
-console.log(persone["name"]);
+console.log(persone['name']);
 
 /*let arr = ['plum.png','orange.jpg','apple.bmp'];
 console.log(arr[0]);
@@ -19,10 +19,11 @@ console.log(arr[0]);
 
 //let answer = prompt("Are you here ?", "Ja");
 //console.log(answer);
-
+/*
 let incr = 10,
     decr = 10;
 
 
     console.log(++incr,',',--decr);
-    console.log("2" === 2);
+    console.log("2" === 2);*/
+ 
