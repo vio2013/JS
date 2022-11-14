@@ -20,7 +20,7 @@ function first ()
         function()
         {
             console.log(1);
-        },500
+        },1500
     );
 
 }
@@ -30,3 +30,13 @@ function second ()
 }
 first();
 second();
+
+function LearnJS (lang, callback)
+{
+    console.log("Ich lerne " + lang);
+    callback();
+}
+LearnJS("Java Scrpot", function()
+{
+    console.log("ich nabe dritte unterricht geschaft");
+});
