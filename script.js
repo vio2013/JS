@@ -16,3 +16,23 @@ cars.forEach(function(item,i,mass)
     console.log(i + ' : ' + item + "( massive " + mass + ")");
 })
 ;
+let options = 
+{
+    wight: 1024,
+    innerHeight: 1034,
+    name: "test"
+};
+console.log(options.wight*options.innerHeight, options.name);
+options.bool = false;
+options.farbe = 
+{
+    border: "red",
+    bg: "schwarz"
+};
+
+for (let key in options)
+{
+    console.log("Feature" + key + 'hat Wert' + options{key});
+}
+
+console.log(options);
