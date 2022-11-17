@@ -5,7 +5,7 @@
 }
 
 .line-separator, .x-axis {
-    stroke: #777;
+    stroke: black;
     fill: none;
     stroke-width: 1px;
 }
