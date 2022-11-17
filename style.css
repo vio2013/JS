@@ -5,7 +5,7 @@
 }
 
 .line-separator, .x-axis {
-    stroke: black;
+    stroke: burlywood;
     fill: none;
     stroke-width: 1px;
 }
