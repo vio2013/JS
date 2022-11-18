@@ -67,3 +67,4 @@ function detectPersonalLevel ()
 detectPersonalLevel();
 
 console.log(personalMovieDB);
+

@@ -1,11 +1,11 @@
 .y-tick {
-    stroke: black;
+    stroke: rgb(167, 38, 38);
     fill: none;
     stroke-width: 1px;
 }
 
 .line-separator, .x-axis {
-    stroke: burlywood;
+    stroke: rgb(135, 222, 189);
     fill: none;
     stroke-width: 1px;
 }
@@ -16,5 +16,5 @@
 
 text {
     stroke: none;
-    fill: black;
+    fill: rgb(188, 36, 194);
 }
