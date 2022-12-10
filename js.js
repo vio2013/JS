@@ -20,7 +20,7 @@ btn[1].addEventListener('mouseenter', function()
     alert('Sie sind suf erste Button');
 }
 )*/
-
+/*
 btn.forEach(function(item)
 {
     item.addEventListener('mouseleave', function()
@@ -37,4 +37,6 @@ let incr = 10,
     console.log (incr);
     console.log (++incr);
     console.log (--decr);
-    console.log (decr--);
+    console.log (decr--);*/
+
+    
