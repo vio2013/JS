@@ -1,5 +1,5 @@
 'use strict';
-let btn = document.querySelectorAll('button');
+//let btn = document.querySelectorAll('button');
 
 //btn[0].onclick = function()
 //{
@@ -39,4 +39,41 @@ let incr = 10,
     console.log (--decr);
     console.log (decr--);*/
 
-    
+  /*function learnJS(lang, callback)
+  {
+    console.log(`ich lerne: ${lang} `);
+    callback();
+  }
+  function done() {
+    console.log(`ich habe geschaft`);
+  }
+learnJS(`JavaScript`, done);*/
+
+const options = {
+    name: 'test',
+    wight: 120,
+    height: 345,  
+    colors: {
+      border: 'black',
+      bg: 'red'
+    }
+};
+console.log(options.name); 
+for (let key in options)
+{
+  if (typeof(options[key])=== 'object')
+  {
+    for (let i in options[key])
+    {
+      console.log(`Feature ${i} hat Wert ${options[key][i]} `);
+    }
+  }else
+  {
+    console.log(`Feature ${key} hat Wert ${options[key]} `);
+  }
+ 
+}
+
+
+
+
