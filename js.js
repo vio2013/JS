@@ -1,4 +1,4 @@
-'use strict';
+//'use strict';
 //let btn = document.querySelectorAll('button');
 
 //btn[0].onclick = function()
@@ -57,7 +57,9 @@ const options = {
       border: 'black',
       bg: 'red'
     }
+  
 };
+let counter = 0;
 console.log(options.name); 
 for (let key in options)
 {
@@ -66,14 +68,15 @@ for (let key in options)
     for (let i in options[key])
     {
       console.log(`Feature ${i} hat Wert ${options[key][i]} `);
+      counter++;
     }
   }else
   {
     console.log(`Feature ${key} hat Wert ${options[key]} `);
+    counter++;
   }
- 
 }
-
+console.log(counter);
 
 
 

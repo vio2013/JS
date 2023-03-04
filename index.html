@@ -6,7 +6,21 @@
     </head>
     <body>
     
-        <script src="script.js"></script>
+    <!--  <script src="script.js"></script>     -->    
+    <script>
+        //const regxp = /\d\d/ 
+        //const str = 'Hallo ch bin Igor! Ich bin 44 Jahre alt'
+
+        const regxp = /\D\D.\d\d\S/ 
+        const regxp1 = /\s\w\w\w\s/
+        const regxp2 = /[!HJ].hre/
+        const regxp3 = /[^a-cf-k]/
+
+        const str = 'Hallo ich bin Hahre! Ich bin 44 Jahre alt. Bist Du 40 Qahre? ABCDEFGHOPRSTUWZY'
+
+        const result = str.match(regxp3)
+        console.log(result)
+    </script>
 
     </body>
 </html>
