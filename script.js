@@ -10,7 +10,7 @@ str.length - и получить её длину)
 "Вы киноман". А если не подошло ни к одному варианту - "Произошла ошибка"
 4) Потренироваться и переписать цикл еще двумя способами*/
 
-'use strict';
+/*'use strict';
 
 let numberOfFilms;
 function start ()
@@ -66,5 +66,9 @@ function detectPersonalLevel ()
 }
 detectPersonalLevel();
 
-console.log(personalMovieDB);
+console.log(personalMovieDB);*/
+
+const a = 'test';
+
+        console.log(a);
 
