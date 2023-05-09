@@ -22,7 +22,7 @@ const userObj: {
 
 console.log(userObj.smt);*/
 
-import { type } from "os";
+//import { type } from "os";
 
 /*if (isBirthday) {
   console.log(`Congrats ${userName.toUpperCase()}, age: ${age + 1} `);

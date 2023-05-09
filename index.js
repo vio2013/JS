@@ -1,4 +1,3 @@
-"use strict";
 /*
 const str = "str";
 console.log(str + "123");
@@ -22,7 +21,7 @@ const userObj: {
 } = JSON.parse(usrData);
 
 console.log(userObj.smt);*/
-Object.defineProperty(exports, "__esModule", { value: true });
+//import { type } from "os";
 /*if (isBirthday) {
   console.log(`Congrats ${userName.toUpperCase()}, age: ${age + 1} `);
 }*/
