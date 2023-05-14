@@ -1,3 +1,4 @@
+"use strict";
 /*
 const str = "str";
 console.log(str + "123");
@@ -21,6 +22,7 @@ const userObj: {
 } = JSON.parse(usrData);
 
 console.log(userObj.smt);*/
+Object.defineProperty(exports, "__esModule", { value: true });
 //import { type } from "os";
 /*if (isBirthday) {
   console.log(`Congrats ${userName.toUpperCase()}, age: ${age + 1} `);
@@ -235,18 +237,24 @@ function checkReadings (readings: {system: number} | {user: number}): void {
 }*/
 var msg = "Hello";
 msg = "Hello";
+var serverConfig = {
+    protocol: "https",
+    port: 3001,
+    role: 'admin',
+    log: function (msg) { return console.log(msg); }
+};
 var port3000 = 3000;
 var port3001 = 3001;
-function startServer(protocol, port) {
+var startServer = function (protocol, port, log) {
     if (port === port3000 || port === port3001) {
-        console.log("Server started on ".concat(protocol, "://server:").concat(port));
+        log("Server started on ".concat(protocol, "://server:").concat(port));
     }
     else {
         console.error("Invalid port");
     }
     return "Server started";
-}
-startServer("https", 3001);
+};
+startServer(serverConfig.protocol, serverConfig.port, serverConfig.log);
 function createAnimation(id, animName, timingFunc, duration, iterCount) {
     // const elem = document.querySelector(`#${id}`) as HTMLElement;
     if (timingFunc === void 0) { timingFunc = "ease"; }
