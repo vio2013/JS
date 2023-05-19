@@ -1,266 +1,34 @@
-"use strict";
-/*
-const str = "str";
-console.log(str + "123");
-console.log(str);    */
-/*
-const isBirthdayData: boolean = true;
-const ageData: number = 40;
-const userNameData: string = "John";
-
-
-
-const createError = (msg: string) => {
-  throw new Error(msg);
-}*/
-//const usrData = '{"isBirthdayData: true", "ageData: 40","userNameData: "John""}';
-/*
-const userObj: {
-  isBirthday: boolean;
-  userName: string;
-  age: number;
-} = JSON.parse(usrData);
-
-console.log(userObj.smt);*/
-Object.defineProperty(exports, "__esModule", { value: true });
-//import { type } from "os";
-/*if (isBirthday) {
-  console.log(`Congrats ${userName.toUpperCase()}, age: ${age + 1} `);
-}*/
-/*
-function logBirthday(isBirthday: boolean, userName: string, age: number):string {
-if (isBirthday === true)
-{
-  return`Congrats ${userName.toUpperCase()}, age: ${age + 1} `;
-}
-else if ((isBirthday === false)){
-  return "too bad"
-}
-return createError("Error")
-}
-logBirthday(isBirthdayData, userNameData, 40);*/
-/*
-const logBirthday = (
-  isBirthday: boolean,
-  userName: string,
-  age: number
-): string => {
-  if (isBirthday) return `Congrats ${userName.toUpperCase()}, age: ${age + 1} `;
-  else return "Error";
+// структура данных склада с одеждой
+// главный объект со всеми данными, должен подходить под формат TotalWarehouse
+var totalData = {
+    jackets: 5,
+    hats: "empty",
+    socks: "empty",
+    pants: 15,
+    scissors: 15,
+    paper: true,
+    dishwashers: 3,
+    cookers: "empty",
+    mixers: 14,
+    deficit: false,
+    date: new Date(),
 };
-logBirthday(isBirthdayData, userNameData, ageData);*/
-//-------------------------------------------------------------------------
-/*
-const currRate: string = "1.05";
-
-const fetchCurr = (response: string): number => {
-    const data = JSON.parse(response);
-    return data;
-};
-
-function transferEurToUsd(
-        available: boolean,
-        amount: number,
-        commission: number):void {
-    if (available) {
-        let res: number = fetchCurr(currRate) * amount * commission;
-        console.log(res);
-        // Или запись в элемент на странице вместо консоли
-    } else {
-        console.log("Сейчас обмен недоступен");
-    }
-}
-
-transferEurToUsd(true, 500, 1.05);*/
-//--------------------------------------------------------------
-/*let id : symbol = Symbol("id");
-
-const data = {
-  [id]:"sadgverfgderg"
-};
-const num1 : bigint = 1n;
-const num2 : bigint = 2n;
-
-console.log(num1 + num2 + 5n);
-
-console.log(data[id]);*/
-//--------------
-/*
-const isBirthdayData: boolean = true;
-let ageData:  number = 40;
-const userNameData: string = "John";*/
-//---------------*****************************************************************
-/*const userData = {
-  isBirthdayData: true,
-  ageData: 40,
-  userNameData: "John",
-  messages: {
-    error: "Error",
-  },
-};
-
-const userDataTuple: [boolean, number, ...string[], boolean] = [true, 40, "John", 'Alex','Inna', true];
-//userDataTuple.push(50);
-const res = userDataTuple.map((t) => `${t} - data`)
-
-const [bthd, age, userName] = userDataTuple;
-
-const createError = (msg: string) => {
-  throw new Error(msg);
-};
-
-function logBrtMsg({
-  isBirthdayData,
-  userNameData,
-  ageData,
-  messages: { error },
-}: {
-  isBirthdayData: boolean;
-  userNameData: string;
-  ageData: number;
-  messages: { error: string };
-}): string {
-  if (isBirthdayData) {
-    return `Congrats ${userNameData.toUpperCase()}, age: ${ageData + 1} `;
-  } else {
-    return createError(error);
-  }
-}
-
-console.log(logBrtMsg(userData));
-
-const departmens: string[] = ["dev", "design", "marketing"];
-const department = departmens[0];
-//departmens.push(5);
-const report = departmens
-                        .filter((d: string) => d == "dev")
-                        .map((d: string) => `${d} - done`);
-
-const nums: number[][] = [
-  [3, 5, 2, 8, 9],
-  [44, 66, 55, 77, 55],
-];
-const [first] = report;
-console.log(first);*/
-//****************************************************************
-/*
-const electricityUserData = {
-  readings: 95,
-  units: "kWt",
-  mode: "double",
-};
-
-const waterUserData = {
-  readings: 3,
-  units: "m3",
-};
-
-const elRate: number = 0.45;
-const wRate: number = 2;
-
-const monthPayments: number[] = [0, 0]; // [electricity, water]
-
-const calculatePayments = (
-  { readings, mode }: { readings: number; mode: string },
-  wData: { readings: number },
-  elRate: number,
-  wRate: number
-): void => {
-  if (mode === "double" && readings < 50) {
-    monthPayments[0] = readings * elRate * 0.7;
-  } else {
-    monthPayments[0] = readings * elRate;
-  }
-
-  monthPayments[1] = wData.readings * wRate;
-};
-
-calculatePayments(electricityUserData, waterUserData, elRate, wRate);
-
-const sendInvoice = (
-  [el, water]: number [],
-  //monthPayments: number,
-  electricityUserData: { readings: number; units: string },
-  waterUserData: { readings: number; units: string }
-): string => {
-  const text = `    Hello!
-    This month you used ${electricityUserData.readings} ${electricityUserData.units} of electricity
-    It will cost: ${el}€
-    
-    This month you used ${waterUserData.readings} ${waterUserData.units} of water
-    It will cost: ${water}€`;
-
-  return text;
-};
-const invoice = sendInvoice(monthPayments, electricityUserData, waterUserData);
-console.log(invoice);*/
-/*
-const message: string | number | boolean = "g";
-const messages: string[] | number[] | boolean[] = ["a", "h"];
-
-function printMsg(msg: string | number | boolean): void {
-  if (typeof msg === "string" || typeof msg === 'number') {
-    console.log(msg.toString);
-  } else {
-    console.log(msg.valueOf);
-  }
-}
-//*************************************** */
-/*
-function printMsg(msg: string | number | boolean): void {
-  if (Array.isArray(msg)) {
-    msg.forEach((m) => console.log(m));
-  } else if (typeof msg === "number") {
-    console.log(msg.toFixed());
-  } else {
-    console.log(msg);
-  }
-}
-
-const printReadings = (a: number | string, b: number | boolean) => {
-  if (a === b) {
-    console.log(a, b);
-  }
-};
-const printReadings2 = (a: number[] | string) => {
- {
-    console.log(a.slice(0, 3));
-  }
-};
-
-function checkReadings (readings: {system: number} | {user: number}): void {
-    if ('system' in readings){
-      console.log(readings.system)
-    }else {
-      console.log(readings.user)
-    }
-}*/
-var msg = "Hello";
-msg = "Hello";
-var serverConfig = {
-    protocol: "https",
-    port: 3001,
-    role: 'admin',
-    log: function (msg) { return console.log(msg); }
-};
-var port3000 = 3000;
-var port3001 = 3001;
-var startServer = function (protocol, port, log) {
-    if (port === port3000 || port === port3001) {
-        log("Server started on ".concat(protocol, "://server:").concat(port));
+// Реализуйте функцию, которая принимает в себя главный объект totalData нужного формата
+// и возвращает всегда строку
+// Функция должна отфильтровать данные из объекта и оставить только те названия товаров, у которых значение "empty"
+// и поместить их в эту строку. Если таких товаров нет - возвращается другая строка (см ниже)
+// С данным объектом totalData строка будет выглядеть:
+// "We need this items: hats, socks, cookers"
+// Товары через запятую, в конце её не должно быть. Пробел после двоеточия, в конце строки его нет.
+function printReport(data) {
+    var result = Object.entries(data)
+        .filter(function (item) { return item[1] === "empty"; })
+        .reduce(function (res, item) { return "".concat(res, " ").concat(item[0], ","); }, "");
+    if (result.trim().length) {
+        return "We need this items:".concat(result.slice(0, -1));
     }
     else {
-        console.error("Invalid port");
+        return "Everything fine";
     }
-    return "Server started";
-};
-startServer(serverConfig.protocol, serverConfig.port, serverConfig.log);
-function createAnimation(id, animName, timingFunc, duration, iterCount) {
-    // const elem = document.querySelector(`#${id}`) as HTMLElement;
-    if (timingFunc === void 0) { timingFunc = "ease"; }
-    // if (elem) {
-    console.log("".concat(animName, " ").concat(timingFunc, " ").concat(duration, " ").concat(iterCount));
-    // elem.style.animation = `${animName} ${timingFunc} ${duration} ${iterCount}`;
-    // }
 }
-createAnimation("id", "fade", "ease-in", 5, "infinite");
+console.log(printReport(totalData));
