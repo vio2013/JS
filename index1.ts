@@ -237,7 +237,7 @@ function checkReadings (readings: {system: number} | {user: number}): void {
       console.log(readings.user)
     }
 }*/
-let msg: "Hello" = "Hello";
+/*let msg: "Hello" = "Hello";
 
 msg = "Hello";
 
@@ -252,6 +252,7 @@ interface Config {
 };
 type ConfigWithRole = Config&Role;*/
 
+/*
 interface Role {
   role:string
 }
@@ -274,6 +275,7 @@ const port3001: number = 3001;
   port: 3000,
   role: 'sysadmin'
 }; */
+/*
 type StartFunction = (protocol: "http" | "https", port: 3000 | 3001, log: (msg: string)=> void) => string;
 
 const startServer: StartFunction = (
@@ -310,4 +312,12 @@ function createAnimation(
   // }
 }
 
-createAnimation("id", "fade", "ease-in", 5, "infinite");
+createAnimation("id", "fade", "ease-in", 5, "infinite");*/
+let a = 1 + 2
+let b = a + 3
+let c =
+{
+apple: a,
+banana: b
+}
+let d: number = c.apple * 4
