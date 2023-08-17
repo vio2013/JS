@@ -19,7 +19,9 @@
                 <li><a href="contacts.html">Contacts</a></li>
             </ul>
             <ul class="user-navigation">
-                <li class="login-link">Eintritt</li>
+                <li class="login-link">
+                    <a class="login-link" href="login.html">Eintritt</a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -63,8 +65,8 @@
             <figure class="galery-content">
                 <a href="#"><img src="img/1.jpg" width="286" height="164" alt="Interier"></a>
             </figure>
-            <span class="button galery-button galery-button-back"></span>
-            <span class="button galery-button galery-button-next"></span>
+            <button class="button galery-button galery-button-back" type="button"> Zurück </button>
+            <button class="button galery-button galery-button-next" type="button"> Vorne </button>
         </section>
         <section class="contacts">
             <h2>Kontaktinformation</h2>
@@ -87,6 +89,25 @@
                 Wunschdata: <br>
                 Wunschzeit: <br>
             </p>
+            <form class="appointment-form" accept="https://echo.htmlacademy.ru" method="post">
+                <p class="appointment-item">
+                    <label for="appointment-date"> Datum </label><br>
+                    <input id="appointment-date" type="text" name="date" value="" placeholder="08.10.2017">
+                </p>
+                <p class="appointment-item">
+                    <label for="appointment-time"> Zeit </label><br>
+                    <input id="appointment-time" type="text" name="time" value="" placeholder="10:00">
+                </p>
+                <p class="appointment-item">
+                    <label for="appointment-name"> Was sollen wir machen? </label><br>
+                    <input id="appointment-name" type="text" name="name" value="" placeholder="Bart">
+                </p>
+                <p class="appointment-item">
+                    <label for="appointment-phone">Handy</label><br>
+                    <input id="appointment-phone" type="tel" name="phone" value="" placeholder="+49 12213232">
+                </p>
+                <button class="button" type="submit"> Senden </button>
+            </form>
             <!-- Form -->
         </section>
     </main>
@@ -110,13 +131,32 @@
     </footer>
     <section class="modal modal-login">
         <h2>Dein Kabinet</h2>
-        <p>Gebei Sie Login und Password ein</p>
-        <!-- Form -->
-        <span class="modal-close">x</span>
+        <p>Geben Sie Login und Password ein</p>
+        <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+            <p>
+                <label class="visuability-hidden" for="user-login">Login</label>
+                <input id="user-login" class="login-icon-user" type="text" name="login" placeholder="Login">
+            </p>
+            <p>
+                <label class="visuability-hidden" for="user-password">Password</label>
+                <input id="user-password" class="login-icon-password" type="password" name="password"
+                    placeholder="Password">
+            </p>
+            <p class="login-password-info">
+                <input type="checkbox" name="remember" class="visuability-hidden" id="login-password-info">
+                <label for="login-password-info">Remember me</label>
+                <a class="restore" href="#"> Ich habe den Password vergessen</a>
+            </p>
+            <button class="button" type="submit">Eintritt</button>
+        </form>
+        <button class="modal-close" type="button"> Schliessen </button>
     </section>
     <section class="modal modal-map">
-        <h2 class="visuability-hidden">Weg zu uns</h2>
-        <span class="modal-close">x</span>
+        <h2 class="visuability-hidden">Der Weg zu uns</h2>
+        <p>
+            <img src="img/map.jpg" width="780" height="560" alt="Office Addresse : ">
+        </p>
+        <button class="modal-close" type="button"> Schliessen</button>
     </section>
 </body>
 
